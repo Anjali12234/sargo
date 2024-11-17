@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
     <title>Sargo Paints</title>
     @vite('resources/css/app.css')
+    @vite('resources/js/app.js')
 </head>
 
 <body>
     <header>
-        <div class=" bg-blue-900 md:bg-red-900 lg:yellow-900  h-11  text-white text-sm">
+        <div class=" bg-blue-900 md:bg-slate-300 lg:yellow-900  h-9  text-black text-sm">
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 ">
                 <div class=" flex gap-2 md:gap-1 items-center justify-center mt-1  mr-2 lg:ml-16">
                     <a href="#"><i class="ti ti-address-book"></i></a>
@@ -34,11 +35,11 @@
             </div>
         </div>
     </header>
-    <nav id="mainNavbar" class="shadow-md shadow-neutral-300">
-        <div class='flex flex-wrap items-center justify-between px-1 py-3 gap-4 w-full'>
+    <nav id="mainNavbar" class="">
+        <div class='flex flex-wrap items-center justify-between px-1 py-3 gap-4 w-full  h-28'>
             <div class='flex items-center gap-4 px-10'>
                 <a href="javascript:void(0)">
-                    <img src="{{ asset('assets/frontend/static image/logo1.jpg') }}" alt="logo" class='w-40 h-10' />
+                    <img src="{{ asset('assets/frontend/static image/logo1.jpg') }}" alt="logo" class='w-44 h-20' />
                 </a>
 
             </div>
@@ -57,7 +58,8 @@
                 </button>
 
                 <ul
-                    class='lg:flex lg:gap-x-10 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
+                    class='lg:flex lg:gap-x-10 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px]
+                     max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
                     <li class='mb-6 hidden max-lg:block'>
                         <a href="javascript:void(0)"><img src="../img/logo1.png" alt="logo" class='w-36' />
                         </a>
@@ -65,7 +67,7 @@
 
                     <li class='group text-[14px] max-lg:border-b max-lg:px-3 max-lg:py-2 relative'>
                         <a href='javascript:void(0)'
-                            class='hover:text-[#007bff] hover:fill-[#007bff] text-gray-500 font-bold text-[15px] block'>Product<svg
+                            class='hover:text-[#007bff] hover:fill-[#007bff] text-gray-500 font-semibold text-[18px] block'>Product<svg
                                 xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"
                                 class="ml-1 inline-block" viewBox="0 0 24 24">
                                 <path
@@ -184,7 +186,7 @@
                     </li>
                     <li class='group max-lg:border-b max-lg:py-3 relative'>
                         <a href='javascript:void(0)'
-                            class='hover:text-[#007bff] text-gray-600 text-[15px] font-bold lg:hover:fill-[#007bff] block'>Ideas<svg
+                            class='hover:text-[#007bff] text-gray-600 text-[18px] font-semibold lg:hover:fill-[#007bff] block'>Ideas<svg
                                 xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"
                                 class="ml-1 inline-block" viewBox="0 0 24 24">
                                 <path
@@ -211,7 +213,7 @@
                     </li>
                     <li class='group max-lg:border-b max-lg:py-3 relative'>
                         <a href='javascript:void(0)'
-                            class='hover:text-[#007bff] text-gray-600 text-[15px] font-bold lg:hover:fill-[#007bff] block'>Services<svg
+                            class='hover:text-[#007bff] text-gray-600 text-[18px] font-semibold lg:hover:fill-[#007bff] block'>Services<svg
                                 xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"
                                 class="ml-1 inline-block" viewBox="0 0 24 24">
                                 <path
@@ -237,7 +239,7 @@
                         </ul>
                     </li>
                     <li class='max-lg:border-b max-lg:py-3'><a href='javascript:void(0)'
-                            class='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>BathSense</a>
+                            class='hover:text-[#007bff] text-gray-600 text-[18px] font-semibold block'>BathSense</a>
                     </li>
 
                 </ul>
@@ -267,17 +269,17 @@
             </div>
         </div>
     </nav>
-    <div class="fixed top-0 left-0 right-0 z-50 hidden bg-blue-900 bg-opacity-90" id="stickyNavbar">
+    <div class="fixed top-0 left-0 right-0 z-50 hidden bg-white shadow-lg shadow-slate-300 " id="stickyNavbar">
         <div class='flex flex-wrap items-center justify-between px-10 py-2 gap-4 w-full'>
             <div class='flex items-center gap-4 px-10'>
                 <a href="javascript:void(0)">
-                    <img src="../img/logo1.png" alt="logo" class='w-20 h-20' />
+                    <img src="{{ asset('assets/frontend/static image/logo1.jpg') }}" alt="logo" class='w-44 h-20' />
                 </a>
-                <div class="h-20 border-l border-gray-300"></div> <!-- Vertical line -->
-                <div class="flex flex-col text-white">
+                {{-- <div class="h-20 border-l border-gray-300"></div> <!-- Vertical line -->
+                <div class="flex flex-col text-black">
                     <span class="text-4xl font-bold tracking-widest">SVS</span>
                     <span class="text-xl ">Nepalgunj,Banke</span>
-                </div>
+                </div> --}}
             </div>
 
             <div id="collapseMenu"
@@ -294,105 +296,190 @@
                 </button>
 
                 <ul
-                    class='lg:flex lg:gap-x-10 max-lg:space-y-3 text-white max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
+                    class='lg:flex lg:gap-x-10 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px]
+                     max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
                     <li class='mb-6 hidden max-lg:block'>
                         <a href="javascript:void(0)"><img src="../img/logo1.png" alt="logo" class='w-36' />
                         </a>
                     </li>
-                    <li class='max-lg:border-b max-lg:py-3'><a href='javascript:void(0)'
-                            class='hover:text-blue-600 text-[15px] font-bold block'>Home</a></li>
-                    <li class='group max-lg:border-b max-lg:py-3 relative'>
+
+                    <li class='group text-[14px] max-lg:border-b max-lg:px-3 max-lg:py-2 relative'>
                         <a href='javascript:void(0)'
-                            class='hover:text-[#007bff]  text-[15px] font-bold lg:hover:fill-[#007bff] block'>About
-                            Us<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"
-                                class="ml-1 inline-block" fill="white" viewBox="0 0 24 24">
+                            class='hover:text-[#007bff] hover:fill-[#007bff] text-gray-500 font-semibold text-[18px] block'>Product<svg
+                                xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"
+                                class="ml-1 inline-block" viewBox="0 0 24 24">
                                 <path
                                     d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
                                     data-name="16" data-original="#000000" />
                             </svg>
                         </a>
-                        <ul
-                            class='absolute shadow-lg text-black bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
-                            <li class='border-b py-2 '><a href='javascript:void(0)'
-                                    class='hover:text-[#007bff] text-[15px] font-bold block'>About</a>
-                            </li>
-                            <li class='border-b py-2 '><a href='javascript:void(0)'
-                                    class='hover:text-[#007bff] text-[15px] font-bold block'>Contact</a>
-                            </li>
-                            <li class='border-b py-2 '><a href='javascript:void(0)'
-                                    class='hover:text-[#007bff] text-[15px] font-bold block'>Login</a>
-                            </li>
-                            <li class='border-b py-2 '><a href='javascript:void(0)'
-                                    class='hover:text-[#007bff] text-[15px] font-bold block'>Sign
-                                    up</a></li>
-                            <li class='border-b py-2 '><a href='javascript:void(0)'
-                                    class='hover:text-[#007bff] text-[15px] font-bold block'>Blog</a>
-                            </li>
-                        </ul>
+                        <div
+                            class='absolute lg:top-5 max-lg:top-8 -left-6 z-50 flex shadow-lg bg-white max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-8 group-hover:pb-8 group-hover:pt-6 transition-all duration-500'>
+                            <div class="lg:min-w-[180px] max-lg:min-w-[140px]">
+                                <h6 class="text-base text-[#007bff] font-bold">USA</h6>
+                                <ul class='mt-3 pt-3 border-t border-1 space-y-3'>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>New
+                                            York</a></li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>San
+                                            Francisco</a></li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Houston</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Dallas</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Philadelphia</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>San
+                                            Diego</a></li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Atlanta</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Austin</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Portland</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Denver</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="lg:min-w-[180px] max-lg:min-w-[140px]">
+                                <h6 class="text-base text-[#007bff] font-bold">UK</h6>
+                                <ul class='mt-3 pt-3 border-t border-1 space-y-3'>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>London</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Bristol</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Birmingham</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Liverpool</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Manchester</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Glasgow</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Edinburgh</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Leeds</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Leicester</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Sheffield</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h6 class="text-base text-[#007bff] font-bold">Canada</h6>
+                                <ul class='mt-3 pt-3 border-t border-1 space-y-3'>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Toronto</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Calgary</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Ottawa</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Vancouver</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Montréal</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Edmonton</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Winnipeg</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Halifax</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Victoria</a>
+                                    </li>
+                                    <li class='max-lg:border-b py-1 rounded'><a href='javascript:void(0)'
+                                            class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>Windsor</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </li>
                     <li class='group max-lg:border-b max-lg:py-3 relative'>
                         <a href='javascript:void(0)'
-                            class='hover:text-[#007bff] text-[15px] font-bold lg:hover:fill-[#007bff] block'>Academics<svg
+                            class='hover:text-[#007bff] text-gray-600 text-[18px] font-semibold lg:hover:fill-[#007bff] block'>Ideas<svg
                                 xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"
-                                class="ml-1 inline-block" fill="white" viewBox="0 0 24 24">
+                                class="ml-1 inline-block" viewBox="0 0 24 24">
                                 <path
                                     d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
                                     data-name="16" data-original="#000000" />
                             </svg>
                         </a>
                         <ul
-                            class='absolute shadow-lg text-black bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
+                            class='absolute shadow-lg bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
                             <li class='border-b py-2 '><a href='javascript:void(0)'
-                                    class='hover:text-[#007bff] text-[15px] font-bold block'>Foods</a>
+                                    class='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Foods</a>
                             </li>
                             <li class='border-b py-2 '>
                                 <a href='javascript:void(0)'
-                                    class='hover:text-[#007bff] text-[15px] font-bold block'>Sale</a>
+                                    class='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Sale</a>
                             </li>
                             <li class='border-b py-2 '><a href='javascript:void(0)'
-                                    class='hover:text-[#007bff] text-[15px] font-bold block'>Marketing</a>
+                                    class='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Marketing</a>
                             </li>
                             <li class='border-b py-2 '><a href='javascript:void(0)'
-                                    class='hover:text-[#007bff] text-[15px] font-bold block'>Investment</a>
+                                    class='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Investment</a>
                             </li>
                         </ul>
                     </li>
                     <li class='group max-lg:border-b max-lg:py-3 relative'>
                         <a href='javascript:void(0)'
-                            class='hover:text-[#007bff] text-[15px] font-bold lg:hover:fill-[#007bff] block'>Admission<svg
+                            class='hover:text-[#007bff] text-gray-600 text-[18px] font-semibold lg:hover:fill-[#007bff] block'>Services<svg
                                 xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"
-                                class="ml-1 inline-block" fill="white" viewBox="0 0 24 24">
+                                class="ml-1 inline-block" viewBox="0 0 24 24">
                                 <path
                                     d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
                                     data-name="16" data-original="#000000" />
                             </svg>
                         </a>
                         <ul
-                            class='absolute shadow-lg text-black bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
+                            class='absolute shadow-lg bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
                             <li class='border-b py-2 '><a href='javascript:void(0)'
-                                    class='hover:text-[#007bff] text-[15px] font-bold block'>Foods</a>
+                                    class='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Foods</a>
                             </li>
                             <li class='border-b py-2 '>
                                 <a href='javascript:void(0)'
-                                    class='hover:text-[#007bff] text-[15px] font-bold block'>Sale</a>
+                                    class='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Sale</a>
                             </li>
                             <li class='border-b py-2 '><a href='javascript:void(0)'
-                                    class='hover:text-[#007bff] text-[15px] font-bold block'>Marketing</a>
+                                    class='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Marketing</a>
                             </li>
                             <li class='border-b py-2 '><a href='javascript:void(0)'
-                                    class='hover:text-[#007bff] text-[15px] font-bold block'>Investment</a>
+                                    class='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Investment</a>
                             </li>
                         </ul>
                     </li>
                     <li class='max-lg:border-b max-lg:py-3'><a href='javascript:void(0)'
-                            class='hover:text-[#007bff] text-[15px] font-bold block'>Activities</a>
+                            class='hover:text-[#007bff] text-gray-600 text-[18px] font-semibold block'>BathSense</a>
                     </li>
-                    <li class='max-lg:border-b max-lg:py-3'><a href='javascript:void(0)'
-                            class='hover:text-[#007bff] text-[15px] font-bold block'>About</a>
-                    </li>
-                    <li class='max-lg:border-b max-lg:py-3'><a href='javascript:void(0)'
-                            class='hover:text-[#007bff] text-[15px] font-bold block'>Contact</a>
-                    </li>
+
                 </ul>
             </div>
 
@@ -426,89 +513,118 @@
 
     {{-- Carousel --}}
 
-    <div id="carouselExampleCaptions" class="relative" data-twe-carousel-init data-twe-ride="carousel">
-        <!--Carousel indicators-->
-        <div class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
-            data-twe-carousel-indicators>
-            <button type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide-to="0"
-                data-twe-carousel-active
-                class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide-to="1"
-                class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-                aria-label="Slide 2"></button>
-            <button type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide-to="2"
-                class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-                aria-label="Slide 3"></button>
-        </div>
-
-        <!--Carousel items-->
-        <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-            <!--First item-->
-            <div class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                data-twe-carousel-active data-twe-carousel-item style="backface-visibility: hidden">
-                <img src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(15).jpg" class="block w-full"
-                    alt="..." />
-                <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-                    <h5 class="text-xl">First slide label</h5>
-                    <p>
-                        Some representative placeholder content for the first slide.
-                    </p>
+    <!-- Slider -->
+    <div data-hs-carousel='{
+        "loadingClasses": "opacity-0",
+        "dotsItemClasses": "hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-blue-500 dark:hs-carousel-active:border-blue-500",
+        "isAutoPlay": true
+      }'
+        class="relative">
+        <div class="hs-carousel relative overflow-hidden w-full min-h-96 bg-white ">
+            <div
+                class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
+                <div class="hs-carousel-slide">
+                    {{-- <div class="flex justify-center h-full bg-gray-100 p-6 dark:bg-neutral-900"> --}}
+                    <img src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(15).jpg" alt="First slide"
+                        class="w-full h-full object-cover ">
+                    {{-- </div> --}}
                 </div>
-            </div>
-            <!--Second item-->
-            <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                data-twe-carousel-item style="backface-visibility: hidden">
-                <img src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(22).jpg" class="block w-full"
-                    alt="..." />
-                <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-                    <h5 class="text-xl">Second slide label</h5>
-                    <p>
-                        Some representative placeholder content for the second slide.
-                    </p>
+                <div class="hs-carousel-slide">
+                    {{-- <div class="flex justify-center h-full bg-gray-200 p-6 dark:bg-neutral-800"> --}}
+                    <img src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(22).jpg" alt="Second slide"
+                        class="w-full h-full object-cover ">
+                    {{-- </div> --}}
                 </div>
-            </div>
-            <!--Third item-->
-            <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                data-twe-carousel-item style="backface-visibility: hidden">
-                <img src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(23).jpg" class="block w-full"
-                    alt="..." />
-                <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-                    <h5 class="text-xl">Third slide label</h5>
-                    <p>
-                        Some representative placeholder content for the third slide.
-                    </p>
+                <div class="hs-carousel-slide">
+                    {{-- <div class="flex justify-center h-full bg-gray-300 p-6 dark:bg-neutral-700"> --}}
+                    <img src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(23).jpg" alt="Third slide"
+                        class="w-full h-full object-cover ">
+                    {{-- </div> --}}
                 </div>
             </div>
         </div>
 
-        <!--Carousel controls - prev item-->
-        <button
-            class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-            type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide="prev">
-            <span class="inline-block h-8 w-8">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="h-6 w-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+        <button type="button"
+            class="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-s-lg dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10">
+            <span class="text-2xl" aria-hidden="true">
+                <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m15 18-6-6 6-6"></path>
                 </svg>
             </span>
-            <span
-                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous</span>
+            <span class="sr-only">Previous</span>
         </button>
-        <!--Carousel controls - next item-->
-        <button
-            class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-            type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide="next">
-            <span class="inline-block h-8 w-8">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="h-6 w-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        <button type="button"
+            class="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-e-lg dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10">
+            <span class="sr-only">Next</span>
+            <span class="text-2xl" aria-hidden="true">
+                <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m9 18 6-6-6-6"></path>
                 </svg>
             </span>
-            <span
-                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Next</span>
         </button>
+
+        <div class="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 space-x-2"></div>
     </div>
+
+    <!-- End Slider -->
+    <div class="mx-20 my-20">
+
+        <section>
+            <div class="text-center ">
+                <h1 class="font-bold text-3xl">Exquisite Finishes For Your Dream Home</h1>
+            </div>
+            <style>
+                .carousel-item {
+                    display: none;
+                }
+
+                .carousel-item.active {
+                    display: block;
+                }
+            </style>
+            <div class="max-w-5xl">
+                <!-- Main image display -->
+                <div class="relative bg-white shadow-lg  overflow-hidden mt-10">
+                    <div class="carousel-container relative">
+                        <img src="https://www.qatarliving.com/_next/image?url=https://www.qatarliving.com/q/s3/files/styles/detail_page_watermark_bottom_right/s3/vehicles/2024/09/09/7708756/B333BB7C-34D1-4574-A85B-B60F1BA14055.jpeg&w=1920&q=75"
+                            alt="Room 1" class="carousel-item active w-full h-[24rem] object-cover">
+                        <img src="https://www.qatarliving.com/_next/image?url=https://www.qatarliving.com/q/s3/files/styles/detail_page_watermark_bottom_right/s3/vehicles/2024/09/09/7708756/FF2AA9A9-7291-42D4-A8C1-C26F815149F8.jpeg&w=1920&q=75"
+                            alt="Room 2" class="carousel-item w-full h-[24rem]  object-cover">
+                        <img src="https://www.qatarliving.com/_next/image?url=https://www.qatarliving.com/q/s3/files/styles/detail_page_watermark_bottom_right/s3/vehicles/2024/09/09/7708756/B1BE1B8C-35DF-4BF7-B0B1-24D52F522B33.jpeg&w=1920&q=75"
+                            alt="Room 3" class="carousel-item w-full h-[24rem]  object-cover">
+                        <!-- Add more images as needed -->
+                    </div>
+                    <button
+                        class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-r"
+                        onclick="changeSlide(-1)">❮</button>
+                    <button
+                        class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-l"
+                        onclick="changeSlide(1)">❯</button>
+                    <div class="absolute top-0 right-0 bg-teal-500 text-white px-2 py-1 m-2 text-xs">FEATURED
+                    </div>
+                </div>
+
+                <!-- Thumbnails -->
+                <div class="flex space-x-2 mt-4 overflow-x-auto pb-2">
+                    <img src="https://www.qatarliving.com/_next/image?url=https://www.qatarliving.com/q/s3/files/styles/detail_page_watermark_bottom_right/s3/vehicles/2024/09/09/7708756/B1BE1B8C-35DF-4BF7-B0B1-24D52F522B33.jpeg&w=1920&q=75"
+                        alt="Thumbnail 1" class="w-24 h-16 object-cover cursor-pointer rounded"
+                        onclick="setSlide(0)">
+                    <img src="https://www.qatarliving.com/_next/image?url=https://www.qatarliving.com/q/s3/files/styles/detail_page_watermark_bottom_right/s3/vehicles/2024/09/09/7708756/FF2AA9A9-7291-42D4-A8C1-C26F815149F8.jpeg&w=1920&q=75"
+                        alt="Thumbnail 2" class="w-24 h-16 object-cover cursor-pointer rounded"
+                        onclick="setSlide(1)">
+                    <img src="https://www.qatarliving.com/_next/image?url=https://www.qatarliving.com/q/s3/files/styles/detail_page_watermark_bottom_right/s3/vehicles/2024/09/09/7708756/B333BB7C-34D1-4574-A85B-B60F1BA14055.jpeg&w=1920&q=75"
+                        alt="Thumbnail 3" class="w-24 h-16 object-cover cursor-pointer rounded"
+                        onclick="setSlide(2)">
+                    <!-- Add more thumbnails as needed -->
+                </div>
+            </div>
+        </section>
+    </div>
+
 
     {{-- <div>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ratione porro quidem deserunt hic iure doloremque? Sit harum error soluta minus excepturi enim eos blanditiis! Quod cumque velit optio officia!</p>
@@ -559,6 +675,7 @@
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ratione porro quidem deserunt hic iure doloremque? Sit harum error soluta minus excepturi enim eos blanditiis! Quod cumque velit optio officia!</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ratione porro quidem deserunt hic iure doloremque? Sit harum error soluta minus excepturi enim eos blanditiis! Quod cumque velit optio officia!</p>
     </div> --}}
+
     <script>
         const mainNavbar = document.getElementById('mainNavbar');
         const stickyNavbar = document.getElementById('stickyNavbar');
@@ -586,26 +703,24 @@
 
         toggleOpen.addEventListener('click', handleClick);
         toggleClose.addEventListener('click', handleClick);
+    </script>
+     <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
 
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
 
-        var splide = new Splide('.splide', {
-            type: 'loop',
-            perPage: 3,
-            autoplay: true,
-        });
+        function changeSlide(n) {
+            showSlide(currentSlide + n);
+        }
 
-        splide.mount();
-
-        // Initialization for ES Users
-        //Carousel
-        import {
-            Carousel,
-            initTWE,
-        } from "tw-elements";
-
-        initTWE({
-            Carousel
-        });
+        function setSlide(n) {
+            showSlide(n);
+        }
     </script>
 </body>
 
